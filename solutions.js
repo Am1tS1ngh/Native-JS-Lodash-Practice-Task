@@ -76,12 +76,12 @@ const { name, age } = members[0];
 console.log('Extracted name and age using destructuring: ', name, age);
 
 // Question 11: Rename extracted property of object while destructing
-const {memberName: name, memberAge: age} = members[0];
-console.log('Extracted name and age with renamed properties using destructuring: ', name, age);
+var {name: memberName, age: memberAge} = members[0];
+console.log('Extracted name and age with renamed properties using destructuring: ', memberName, memberAge);
 
 // Question 12: Destructure any property of an object and use spread operator to get remaining properties in an object
-const {name: memberName, ...remainingProperties} = members[0];
-console.log('Extracted name and remaining properties using destructuring and spread operator: ', memberName, age);
+var {name: memberName, ...remainingProperties} = members[0];
+console.log('Extracted name and remaining properties using destructuring and spread operator: ', memberName, remainingProperties);
 
 // Question 13: Create a new object by copying using spread operator, override one of the properties to assign a new value in the same step
 const updatedMember = { ...members[0], age: 30 };
